@@ -1,0 +1,12 @@
+@CasaDoCódigo.API_HostAddress = http://localhost:5264
+
+POST {{CasaDoCódigo.API_HostAddress}}/api/authors
+Content-Type: application/json
+
+{
+    "Name":"",
+    "Email": "",
+    "Description": ""
+}
+
+###
