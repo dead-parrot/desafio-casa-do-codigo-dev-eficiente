@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasaDoCódigo.API", "CasaDoCódigo.API\CasaDoCódigo.API.csproj", "{A33817D1-A2A3-4962-BFCE-3A504C411BAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CasaDoCódigo.API", "CasaDoCódigo.API\CasaDoCódigo.API.csproj", "{A33817D1-A2A3-4962-BFCE-3A504C411BAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasaDoCodigo.Domain", "CasaDoCodigo.Domain\CasaDoCodigo.Domain.csproj", "{CE2E7126-3D52-4469-AAAA-5CDD6CA6F55C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CasaDoCodigo.Domain", "CasaDoCodigo.Domain\CasaDoCodigo.Domain.csproj", "{CE2E7126-3D52-4469-AAAA-5CDD6CA6F55C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasadoCodigo.Data", "CasadoCodigo.Data\CasadoCodigo.Data.csproj", "{B69711B1-D1C3-41AF-A2B3-D87A70D62079}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{CE2E7126-3D52-4469-AAAA-5CDD6CA6F55C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE2E7126-3D52-4469-AAAA-5CDD6CA6F55C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE2E7126-3D52-4469-AAAA-5CDD6CA6F55C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B69711B1-D1C3-41AF-A2B3-D87A70D62079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B69711B1-D1C3-41AF-A2B3-D87A70D62079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B69711B1-D1C3-41AF-A2B3-D87A70D62079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B69711B1-D1C3-41AF-A2B3-D87A70D62079}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
