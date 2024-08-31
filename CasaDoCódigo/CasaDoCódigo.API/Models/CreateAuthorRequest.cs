@@ -16,7 +16,7 @@ namespace CasaDoCódigo.API.Models
 
         public Author ToModel()
         {
-            return new Author(Guid.NewGuid(), DateTime.UtcNow, Name, Email, Description);
+            return new Author(Name, Description, Email);
         }
     }
 }

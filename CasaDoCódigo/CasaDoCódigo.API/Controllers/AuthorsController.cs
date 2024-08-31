@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CasaDoCódigo.API.Controllers;
 
-
 [ApiController]
 [Route("api/[Controller]")]
 public class AuthorsController : ControllerBase
