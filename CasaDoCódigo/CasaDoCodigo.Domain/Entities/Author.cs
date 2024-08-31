@@ -26,7 +26,7 @@ namespace CasaDoCodigo.Domain.Entities
         {
             if(string.IsNullOrEmpty(name)) throw new ArgumentNullException(nameof(name));
             if(string.IsNullOrEmpty(description)) throw new ArgumentNullException(nameof(description));
-            if(description.Length <= 400) throw new ArgumentNullException(nameof(description));
+            if(description.Length > 400) throw new ArgumentNullException(nameof(description));
             if(string.IsNullOrEmpty(email)) throw new ArgumentNullException(nameof(email));
             
             Id = Guid.NewGuid();
