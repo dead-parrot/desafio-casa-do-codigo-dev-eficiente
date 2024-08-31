@@ -8,11 +8,15 @@ namespace CasaDoCodigo.Domain
         public CdcDBContext(DbContextOptions options) : base(options) { }
 
         public DbSet<Author> Authors { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Author>()
                 .HasIndex(x => x.Email).IsUnique();
+
+            modelBuilder.Entity<Category>()
+                .HasIndex(x => x.Name).IsUnique();
         }
     }
 }
