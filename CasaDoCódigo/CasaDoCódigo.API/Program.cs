@@ -10,7 +10,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<CdcDBContext>(
-    options => options.UseSqlServer(builder.Configuration.GetConnectionString("sqlserver")));
+    options => options.UseSqlServer(builder.Configuration.GetConnectionString("sqlserver"))
+    .EnableSensitiveDataLogging());
 
 var app = builder.Build();
 

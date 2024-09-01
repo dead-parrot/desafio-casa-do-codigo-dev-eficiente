@@ -1,4 +1,5 @@
-﻿using CasaDoCodigo.Domain.Entities;
+﻿using CasaDoCódigo.API.Validation;
+using CasaDoCodigo.Domain.Entities;
 using System.ComponentModel.DataAnnotations;
 
 namespace CasaDoCódigo.API.Models
@@ -9,6 +10,7 @@ namespace CasaDoCódigo.API.Models
         public string Name { get; set; }
         [Required]
         [EmailAddress]
+        [UniquenessValidator(typeof(Author))]
         public string Email { get; set; }
         [Required]
         [Length(1, 400)]
