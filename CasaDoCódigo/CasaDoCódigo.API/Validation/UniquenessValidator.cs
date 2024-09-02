@@ -9,11 +9,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CasaDoCódigo.API.Validation;
 
-public class UniquenessValidator : ValidationAttribute
+public class Uniqueness : ValidationAttribute
 {
     private Type DomainType { get; set; }
 
-    public UniquenessValidator(Type domainType)
+    public Uniqueness(Type domainType)
     {
         DomainType = domainType;
     }
@@ -36,7 +36,7 @@ public class UniquenessValidator : ValidationAttribute
 
             var columnValue = new SqlParameter("columnValue", valueString);
 
-            //para simplificar, tableName e validationContext.MemberName não são ataques de SQL Injection
+            //para simplificar, tableName e validationContext.MemberName não tem risco de ataque de SQL Injection
             var foundRows = dbContext.Database.SqlQueryRaw<Guid>($"SELECT Id FROM {tableName} WHERE {validationContext.MemberName} = @columnValue", columnValue).ToList();
             
             if(foundRows is not null && foundRows.Count > 0) 

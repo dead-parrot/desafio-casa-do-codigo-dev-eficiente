@@ -19,11 +19,6 @@ public class AuthorsController : ControllerBase
     public IActionResult CreateAuthor(CreateAuthorRequest request)
     {
         var model = request.ToModel();
-        var isEmailDuplicated = _dbContext.Authors.Any(a => a.Email == model.Email);
-        if (isEmailDuplicated)
-        {
-            return BadRequest("Email is duplicated");
-        }
         _dbContext.Authors.Add(model);
         _dbContext.SaveChanges();
         return Ok(model);
