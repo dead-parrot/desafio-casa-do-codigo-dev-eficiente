@@ -23,4 +23,11 @@ public class AuthorsController : ControllerBase
         _dbContext.SaveChanges();
         return Ok(model);
     }
+
+    [HttpGet]
+    public IActionResult GetAllBooks()
+    {
+        var allBooks = _dbContext.Books.Select(x => new { x.Id,  x.Title }).ToList();
+        return Ok(allBooks);
+    }
 }
