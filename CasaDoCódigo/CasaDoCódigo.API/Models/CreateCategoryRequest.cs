@@ -7,7 +7,7 @@ namespace CasaDoCódigo.API.Models
     public class CreateCategoryRequest
     {
         [Required(AllowEmptyStrings = false)]
-        [UniquenessValidator(typeof(Category))]
+        [Uniqueness(typeof(Category))]
         public string Name { get; set; }
 
         public Category ToModel()

@@ -10,6 +10,7 @@ namespace CasaDoCodigo.Domain.Entities
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
+        public List<Book> Books { get; set; } = new List<Book>();
 
         public Category(string name)
         {
@@ -17,5 +18,6 @@ namespace CasaDoCodigo.Domain.Entities
             Name = name;
             Id = Guid.NewGuid();
         }
+
     }
 }

@@ -7,6 +7,7 @@ namespace CasaDoCodigo.Domain
     {
         public CdcDBContext(DbContextOptions options) : base(options) { }
 
+        public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Category> Categories { get; set; }
 
@@ -17,6 +18,12 @@ namespace CasaDoCodigo.Domain
 
             modelBuilder.Entity<Category>()
                 .HasIndex(x => x.Name).IsUnique();
+            
+            modelBuilder.Entity<Book>()
+                .HasIndex(x => x.ISBN).IsUnique();
+
+            modelBuilder.Entity<Book>()
+                .HasIndex(x => x.Title).IsUnique();
         }
     }
 }
