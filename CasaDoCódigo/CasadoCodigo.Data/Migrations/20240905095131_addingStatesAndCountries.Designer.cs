@@ -4,6 +4,7 @@ using CasaDoCodigo.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CasadoCodigo.Data.Migrations
 {
     [DbContext(typeof(CdcDBContext))]
-    partial class CdcDBContextModelSnapshot : ModelSnapshot
+    [Migration("20240905095131_addingStatesAndCountries")]
+    partial class addingStatesAndCountries
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
